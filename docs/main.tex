@@ -1,0 +1,53 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage{microtype}
+
+\geometry{a4paper, top=25mm, bottom=25mm, left=25mm, right=25mm}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+
+\title{\textbf{Treatment Timing, Metabolic Modulation, and Bifurcation-Proximity Control in a Coupled Tumor--Immune--Drug Model (v1.0.1)}}
+
+\author{
+    \textbf{Yuji Marutani}\thanks{Correspondence: \href{mailto:marutani@ovalley.org}{marutani@ovalley.org}} \\
+    \small O'Valley Salon of Meta Design / OAOL Research
+}
+
+\date{August 10, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Conventional treatment models often emphasize cumulative drug exposure or static concentration--response relationships. Such descriptions may be insufficient when intracellular drug availability is dynamically constrained by ATP-dependent drug efflux and when treatment-induced cell death feeds back into immune-effector recruitment. Here, we develop a mechanistic five-dimensional ordinary differential equation (ODE) model coupling tumor growth, intracellular drug concentration, metabolic state, ATP-dependent P-glycoprotein (P-gp/ABCB1)-mediated efflux, and two aggregate immune-effector compartments representing $\text{CD8}^+$ T-cell and natural killer (NK) cell activity.
+
+Under untreated conditions, the calibrated system reaches a trajectory value of $C(40) \approx 983.46$, while the corresponding one-dimensional frozen-state basal equilibrium is $C_+^* \approx 989.81$ with a basal control ratio of $\Lambda_{\text{basal}} \approx 0.010192$. Thus, endogenous immune surveillance remains substantially below the modeled tumor-growth threshold in the calibrated parameter regime.
+
+We then examine oscillatory drug delivery, treatment lead-time offset $\Delta t$, metabolic modulation $B$, and immunogenic cell death (ICD)-dependent immune recruitment as coupled control variables. Under the calibrated drug-input amplitude $I_{\text{amp}} = 0.45$, the final tumor density at $t = 40$~days varies from approximately $206.72$ to $628.84$ across the $(\Delta t, f)$ treatment-timing landscape and from approximately $347.20$ to $637.93$ across the $(\Delta t, B)$ metabolic-modulation landscape. Sensitivity analysis of the ICD priming parameter $p_T$ further separates untreated ($983.46$), fixed-treatment ($819.90 \to 177.11$), and dynamically coordinated treatment ($875.78 \to 58.46$) regimes.
+
+To characterize the changing geometry of the tumor subsystem, we introduce a one-dimensional frozen-state reduction in which intracellular drug, metabolic state, and immune-effector populations are treated as instantaneous parameters. The resulting scalar system admits an effective quasi-potential:
+\begin{equation}
+V_{\text{eff}}(C,t) = \frac{r}{2}\left[\Lambda(t)-1\right]C^2 + \frac{r}{3K}C^3,
+\end{equation}
+where
+\begin{equation}
+\Lambda(t) = \frac{\theta_T E_T(t) + \theta_{NK} E_{NK}(t) + \delta(D(t),M(t))}{r}.
+\end{equation}
+
+Within this scalar frozen-state reduction, $\Lambda = 1.0$ constitutes a transcritical bifurcation boundary. Importantly, the calibrated simulations do not cross this boundary: $\Lambda(t)$ remains subcritical throughout ($\Lambda(t) < 1.0$), peaking at $\Lambda_{\max} \approx 0.667661$. Treatment dynamically moves the system substantially closer to the bifurcation boundary, reducing the instantaneous frozen-state positive equilibrium from approximately $989.81$ at basal control to approximately $332.34$ at peak modeled control ($\approx 65.51\times$ increase in $\Lambda$).
+
+We define this behavior as \textbf{bifurcation-proximity control}: dynamic treatment contracts the tumor-persistent state by reducing the distance to a critical boundary without requiring a bifurcation crossing. All findings are computational and model-dependent and should be interpreted as mathematical predictions rather than direct clinical evidence.
+
+\vspace{0.5em}
+\noindent\textbf{Keywords:} Systems Biology; Nonlinear Dynamics; Tumor--Immune Interactions; Multidrug Resistance; Metabolic Modulation; Treatment Timing; Effective Quasi-Potential; Transcritical Bifurcation; Bifurcation-Proximity Control; Computational Oncology
+\end{abstract}
+
+\end{document}
