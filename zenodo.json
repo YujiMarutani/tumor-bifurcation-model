@@ -1,0 +1,28 @@
+{
+  "title": "Treatment Timing, Metabolic Modulation, and Bifurcation-Proximity Control in a Coupled Tumor–Immune–Drug Model (v1.0.1)",
+  "description": "v1.0.1 Canonical Release (Computational Consistency Correction). Clarifies the distinction between actual 5D dynamic trajectories C(t) and instantaneous 1D frozen-state equilibria C*.",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "creators": [
+    {
+      "name": "Marutani, Yuji",
+      "affiliation": "O'Valley Salon of Meta Design / OAOL Research"
+    }
+  ],
+  "access_right": "open",
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "Systems Biology",
+    "Nonlinear Dynamics",
+    "Tumor-Immune Interactions",
+    "Multidrug Resistance",
+    "Metabolic Modulation",
+    "Treatment Timing",
+    "Effective Quasi-Potential",
+    "Transcritical Bifurcation",
+    "Bifurcation-Proximity Control",
+    "Computational Oncology"
+  ],
+  "version": "v1.0.1",
+  "language": "eng"
+}
